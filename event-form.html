@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Add an Event | The Edge Magazine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!--[if (lt IE 9)&(!IEMobile)]>
+        <link rel="stylesheet" href="../css/ie-layout.css">
+    <![endif]-->
+</head>
+
+<body onload="loadScripts()">
+    <header>
+        <div id="banner">
+            <h1><a href="index.html">The Edge</a><span class="title">magazine</span></h1>
+            <div class="page_identifier">
+                <h2>Sustainability and Social Change in the Thompson Okanagan</h2>
+            </div>
+            <img id="icon" src="images/menu.png" width="35px" alt="menu icon">
+        </div>
+        <nav id="slide-menu" class="off-screen" >
+            <!--Placeholder for dynamically loaded off-canvas navigation menu-->
+            <ul id="slideMenu"></ul>
+        </nav>
+        <nav id="desktop_nav">
+            <ul>
+                <li><a class="button" href="social-issues.html">Social Issues</a></li>
+                <li><a class="button" href="environment.html">The Environment</a></li>
+                <li><a class="button" href="sustainable-living.html">Sustainable Living</a>
+                </li>
+                <li><a class="button" href="solutions.html">Solutions</a></li>
+                <li><a class="button" href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page_identifier">
+        <h2>Submit an Event</h2>
+    </div>
+
+    <div class="wrapper">
+        <form name="form" id="event-form" action="#" method="POST">
+            <fieldset><legend>Your info</legend>
+                <p><label>Your name:<span class="required"> *</span>
+                    <input required type="text" name="name"
+                    title="Please enter your name."
+                    ></label></p>
+                <p><label>Your email:<span class=required> *</span>
+                    <input required type="email" name="email" id="email"
+                    title="Please enter your email."
+                    onblur="isValidEmail(this)"
+                    ></label></p>
+            </fieldset>
+            <fieldset><legend>Event info</legend>
+                <p><label>Event name:<span class="required"> *</span>
+                    <input required type="text" name="event"
+                    title="Please enter your event."
+                    ></label></p>
+                <p><label>Start date:<span class="required"> *</span>
+                    <input required type="date" name="startDate" class="datepicker"
+                    title="Please specify a start date: eg.mm/dd/yy."
+                    ></label></p>
+                <p><label>End date:<span class="required"> *</span>
+                    <input required type="date" name="endDate" class="datepicker"
+                    title="Please specify an end date: eg.mm/dd/yy."></label></p>
+                <p><label>Days of the week:<span class="required"> *</span>
+                    <input required type="text" name="day"
+                    title="Please specify which days of the week your event will take place."></label></p>
+                <p><label>Event time:<span class="required"> *</span>
+                    <input required type="text" name="time"
+                    title="Please specify a beginning and end time."></label></p>
+                <p><label>Address:<span class="required"> *</span>
+                    <input required type="text" name="address"
+                    title="Please specify the location of your event."></label></p>
+                <p><label>City:<span class="required"> *</span>
+                    <input required type="text" name="city"
+                    title="Please enter the city that will host your event."></label></p>
+                <p><label>Event description (up to 50 words):<span class="required"> *</span>
+                    <textarea name="eventInfo" id="eventInfo" cols="30" rows="10" maxlength="250" title="Please give a short description of your event" onblur="isNotEmpty(this)"></textarea>
+                    </label></p>
+                <p><label>Website URL (optional):<br>
+                    <input type="url" name="website" title="Include a website for more info"></label></p>
+                <p><label>Upload an image. (optional) (<a href="submission-guidelines.html#upload">How to upload files</a>)<br>
+                    <input type="file" name="poster" id="image" title="Submit your file in gif, png, or jpg format." onchange="imgExt(this)"></label>
+            </fieldset>
+            <input type="submit" value="Add your Event!">
+            <input type="reset" value="Cancel">
+            <div id="alert" title="Cannot submit."></div>
+        </form>
+    </div>
+
+    <aside>
+        <div id="desktop_action">
+            <ul >
+                <li><a href="events.html">What's Happening</a></li>
+                <li><a href="submission-guidelines.html">Make a Contribution</a></li>
+                <li><a href="resources.html">Find a Resource</a></li>
+            </ul>
+            <div class="page_identifier" id="search"></div>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <div class="page_identifier" id="links"></div>
+            <div id="sidebarLinks"></div>
+        </div>
+    </aside>
+
+    <footer>
+        <ul >
+            <li><a href="events.html">What's Happening</a></li>
+            <li><a href="submission-guidelines.html">Make a Contribution</a></li>
+            <li><a href="resources.html">Find a Resource</a></li>
+        </ul>
+        <ul>
+            <li><a href="social-issues.html">Social Issues</a></li>
+            <li><a href="environment.html">The Environment</a></li>
+            <li><a href="sustainable-living.html">Sustainable Living</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contributors.html">Contributors</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="contact-form.html">Contact Us</a></li>
+        </ul>
+        <small id="copyright">&copy; Copyright The Edge Magazine</small>
+    </footer>
+
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!--
+  cse.xml
+  Google Custom Search Configuration File
+  Modified by Christina Holden
+  October 24, 2015
+
+  A copy of this file was uploaded to the GCS site.
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomSearchEngine id="we-mqoczkqs" creator="000069724499995381963" language="en" encoding="UTF-8" enable_suggest="true" visible="false">
+    <!-- Name of Search Engine -->
+    <Title>Student.athabascau.ca</Title>
+    <Context>
+      <!-- Search filters -->
+      <Facet>
+        <FacetItem title="Social Issues">
+           <Label name="issues" mode="FILTER">
+           </Label>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FacetItem title="Environment">
+           <Label name="environment" mode="FILTER">
+              <Rewrite>environment OR environmental</Rewrite>
+           </Label>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FaceItem title="Sustainable Living">
+           <Label name="sustainability" mode="FILTER">
+              <Rewrite>sustainable living OR sustainability OR living sustainably</Rewrite>
+           </Label>
+        </FaceItem>
+      </Facet>
+      <Facet>
+        <FacetItem title="Solutions">
+           <Label name="solutions" mode="FILTER" >
+              <Rewrite>solution OR solutions</Rewrite>
+           </Label>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FacetItem title="Reviews">
+           <Label name="reviews" mode="FILTER" >
+              <Rewrite>review OR reviews</Rewrite>
+           </Label>
+        </FacetItem>
+      </Facet>
+      <!-- Labels indicating how the engine will handle a site -->
+      <BackgroundLabels>
+        <Label name="_cse_we-mqoczkqs" mode="FILTER" />
+        <Label name="_cse_exclude_we-mqoczkqs" mode="ELIMINATE" />
+        <Label name="best_resource" mode="FILTER" top="1"/>
+      </BackgroundLabels>
+    </Context>
+    <!-- Styles for the search box and results page -->
+    <LookAndFeel resultsurl="http://student.athabascau.ca/~christinaho10/search-results.html" nonprofit="false" element_layout="4" theme="2" custom_theme="true" text_font="Georgia, serif" url_length="full" element_branding="show" enable_cse_thumbnail="true" promotion_url_length="full" ads_layout="1">
+      <Logo />
+      <Colors url="#000000" background="#ebebeb" border="#56562f" title="#56562F" text="#333333" visited="#444444" title_hover="#AB3D25" title_active="#56562F" />
+      <Promotions title_color="#0000CC" title_visited_color="#0000CC" url_color="#00CC00" background_color="#E6E6E6" border_color="#CCCCCC" snippet_color="#333333" title_hover_color="#444444" title_active_color="#00CC00" />
+      <SearchControls input_border_color="#BBBBBB" button_border_color="#000000" button_background_color="#333333" tab_border_color="#777777" tab_background_color="#777777" tab_selected_border_color="#333333" tab_selected_background_color="#333333" />
+      <Results border_color="##56562f" border_hover_color="#AB3D25" background_color="#ebebeb" background_hover_color="#ebebeb" ads_background_color="#FDF6E5" ads_border_color="#FDF6E5" />
+      <Widget query_parameter_name="q" />
+    </LookAndFeel>
+    <AdSense />
+    <EnterpriseAccount />
+    <ImageSearchSettings enable="false" />
+    <autocomplete_settings />
+    <!-- Refinements for the search and order of results -->
+    <sort_by_keys label="Relevance" key="" />
+    <sort_by_keys label="Date" key="date" />
+    <!-- Allow speech input -->
+    <cse_advance_settings enable_speech="true" />
+</CustomSearchEngine>
+

@@ -1,0 +1,55 @@
+<!--
+  annotations.xml
+  Google Custom Search annotations: Sites to be included in the search results
+  Author: Christina Holden
+  October 24, 2015
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<GoogleCustomizations>
+    <Annotations start="0" num="1" total="1">
+          <!-- Home website
+               Score indicates the importance of the site in search results -->
+          <Annotation about="student.athabascau.ca/~christinaho10/*" score="1" timestamp="0x000522b8a60f99da" href="CiZzdHVkZW50LmF0aGFiYXNjYXUuY2EvfmNocmlzdGluYWhvMTAvKhDas76witfIAg">
+              <!-- Labels instructing engine on how to handle the site -->
+              <Label name="_cse_we-mqoczkqs" />
+              <Label name="best_resource" />
+              <AdditionalData attribute="original_url" value="http://student.athabascau.ca/~christinaho10/" />
+          </Annotation>
+          <!-- List of other sites to include in search results -->
+          <Annotation about="http://www.alternativesjournal.ca*" score="1">
+              <Label name="_cse_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://www.alternativesjournal.ca/sustainable-living*" score="1">
+              <Label name="_cse_we-mqoczkqs"/>
+              <Label name="sustainability"/>
+           </Annotation>
+           <Annotation about="http://www.alternativesjournal.ca/science-and-solutions*" score="1">
+              <Label name="_cse_we-mqoczkqs"/>
+              <Label name="solutions" />
+           </Annotation>
+           <Annotation about="http://www.alternativesjournal.ca/about*">
+              <Label name="_cse_exclude_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://www.alternativesjournal.ca/product*">
+              <Label name="_cse_exclude_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://infotel.ca/news*" score="0.7">
+              <Label name="_cse_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://infotel.ca/lifestyle*" score="0.7">
+              <Label name="_cse_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://ensia.com*" score="0.5">
+              <Label name="_cse_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://ensia.com/about*">
+              <Label name="_cse_exclude_we-mqoczkqs"/>
+           </Annotation>
+           <Annotation about="http://roarmag.org*">
+              <Label name="_cse_we-mqoczkqs"/>
+              <Label name="social" />
+           </Annotation>
+    </Annotations>
+    <!-- Instructs engine to include any additions here when calculating results; A copy of this file was uploaded to the GCS site. -->
+    <Include type="Annotations" href="http://student.athabascau.ca/~christinaho10/xml/annotations.xml" />
+</GoogleCustomizations>

@@ -1,0 +1,58 @@
+
+
+h1 {padding-top: 35px;}
+h1 a {font-size: 2.8em;}
+.title {
+    padding-left: 30px;
+    font-size: 2em;
+    display: inline;
+}
+.wrapper, section, article {width: 65%;}
+    aside {width: 35%;}
+#front-page  .blurb:first-child {width: 100%;
+    max-width: 40em;
+    height: 38em;}
+.blurb {height: 30em;}
+.profile {width: 33.3333%;
+    max-width: 20em;}
+input[type="submit"], input[type="reset"] {
+    width: 47%;
+    margin: 0 5px;
+    height: 40px;
+}
+input[type="reset"] {
+    float: right;
+}
+#action {display: none;}
+#menu {display: none;}
+#desktop_action {
+    display: block;
+    margin-top: 1em;
+    padding-top: 22px;
+    font-size: 1em;
+}
+#desktop_action ul {
+    list-style-type: none;
+    padding: 18px 0;
+    margin-left:0;
+    margin-bottom: 1em;
+}
+#desktop_action li {
+    padding: 5px 18px;
+    border-bottom: 1px solid #252b10;
+}
+#desktop_action li:first-child {
+    border-top: 1px solid #252b10;
+}
+.button {
+    float: left;
+    height: 1.9em;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+}
+  #desktop_action form {
+    background: #ebebeb;
+    border: none;
+    margin: 0;
+}
